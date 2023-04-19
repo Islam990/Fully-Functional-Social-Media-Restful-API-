@@ -1,10 +1,8 @@
 package com.islamgad.restapi.restapi.services;
 
 import com.islamgad.restapi.restapi.models.User;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +12,6 @@ public class UserService {
     private static List<User> userList = new ArrayList();
     private static int incrementalId = 0;
 
-    static {
-        userList.add(new User(++incrementalId, "Islam Gad", LocalDate.now().minusYears(25)));
-        userList.add(new User(++incrementalId, "Mohamed Gad", LocalDate.now().minusYears(20)));
-        userList.add(new User(++incrementalId, "Hend Gad", LocalDate.now().minusYears(23)));
-    }
 
     public List<User> getAllUsers() {
         return userList;
